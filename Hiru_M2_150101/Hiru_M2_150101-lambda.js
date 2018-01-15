@@ -4,7 +4,7 @@ exports.handler = function (event, context, callback) {
 
 	callback(null, 'Successfully executed');
 
-	console.log('Successfully executed');
+	console.log('Started the lambda');
 
 	sns.publish({
 		Message: 'This is a test message',
@@ -34,6 +34,8 @@ exports.handler = function (event, context, callback) {
 			// error handling goes here
 			console.log('An error occured');
 		});
+
+		console.log('End the process');
 
 
 
