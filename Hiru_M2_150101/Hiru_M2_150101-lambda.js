@@ -2,9 +2,6 @@ let AWS = require('aws-sdk');
 const sns = new AWS.SNS();
 exports.handler = function (event, context, callback) {
 
-
-
-
 	callback(null, 'Successfully executed');
 
 	console.log('Successfully executed');
@@ -31,9 +28,11 @@ exports.handler = function (event, context, callback) {
 	}).promise()
 		.then(data => {
 			// your code goes here
+			console.log('Data', data);
 		})
 		.catch(err => {
 			// error handling goes here
+			console.log('An error occured');
 		});
 
 
